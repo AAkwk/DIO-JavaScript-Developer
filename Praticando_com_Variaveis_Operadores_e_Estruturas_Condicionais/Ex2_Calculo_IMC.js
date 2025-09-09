@@ -22,17 +22,17 @@ const altura = 1.42;
 const imc = (peso)/(altura*altura);
 
 if (imc < 18.5) {
-    console.log('Seu IMC e',imc.toFixed(1),', voce esta abaixo do peso');
+    console.log('Seu IMC e',imc.toFixed(1),', voce esta abaixo do peso.');
 }
 else if(imc > 18.5 & imc < 25){
-     console.log('Seu IMC e',imc.toFixed(1),', voce esta com peso normal');
+     console.log('Seu IMC e',imc.toFixed(1),', voce esta com peso normal.');
 }
 else if(imc > 25 & imc < 30){
-     console.log('Seu IMC e',imc.toFixed(1),', voce esta acima do peso');
+     console.log('Seu IMC e',imc.toFixed(1),', voce esta acima do peso.');
 }
 else if(imc > 30 & imc < 40){
-     console.log('Seu IMC e',imc.toFixed(1),', voce esta Obeso');
+     console.log('Seu IMC e',imc.toFixed(1),', voce esta Obeso.');
 }
 else{
-    console.log('Seu IMC e',imc.toFixed(1),', voce esta com Obesidade grave');
+    console.log('Seu IMC e',imc.toFixed(1),', voce esta com Obesidade grave.');
 }
