@@ -20,9 +20,6 @@ class Carro{
     }
 }
 
-function ConsumoTotal(carro){
-
-}
 
 const uno = new Carro('Fiat','Vermelho',1/16);
 console.log('R$',(uno.calcularGastoDePercurso(70, 5)).toFixed(2));
