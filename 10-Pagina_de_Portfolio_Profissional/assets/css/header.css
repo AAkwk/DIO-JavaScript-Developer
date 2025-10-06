@@ -1,0 +1,117 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* text-align: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+     */
+}
+.header::after{
+    content: '';
+    display: inline-block;
+    position:absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/assets/icons/header.svg');
+}
+
+
+.header .photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #ffd901;
+}
+
+.header .title {
+    font-family: 'Neue Machina';
+    text-align: center;
+
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.information p {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem;
+    font-size: 1.125rem;
+    
+}
+
+.information .mail a,
+.information .linkedin a, 
+.information .github a{
+    color: #fff;
+    text-decoration: none;    
+}
+
+.information .mail a:hover,
+.information .linkedin a:hover, 
+.information .github a:hover{
+    text-decoration: underline;    
+}
+.information p::before{
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.information .job::before {
+    background-image: url('/assets/icons/job.svg');     
+}
+
+.information .location::before {
+    background-image: url('/assets/icons/map.svg');    
+}
+
+.information .mail::before {
+    background-image: url('/assets/icons/mail.svg');    
+}
+.information .linkedin::before {
+    background-image: url('/assets/icons/linkedin.svg');   
+}
+
+.information .github::before {
+    background-image: url('/assets/icons/github-svgrepo-com.svg');    
+}
+
+@media only screen and (min-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-areas: 
+            "photo title"
+            "photo information"
+        ;
+    } 
+  
+    .header .photo {
+        grid-area: photo;
+        margin: 0 auto;
+    }  
+    .header .title {
+        grid-area: title;
+        text-align: start;
+        max-width: 220px;
+    }  
+    .header .information {
+        grid-area: information;
+    }  
+}
